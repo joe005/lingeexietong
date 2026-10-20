@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "design:2",
+  "receiptType": "architecture-plan",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "design",
+  "inputRevision": 1,
+  "stateVersion": 2,
+  "outcome": "passed",
+  "contentHash": "sha256:a309366c0ac391b361a8f1d8c0fdddc9db074352c31a3900e987028ab1ec55ae",
+  "createdAt": "2026-10-20T07:33:40.045Z",
+  "timing": {
+    "startedAt": "2026-10-20T07:15:10.802Z",
+    "completedAt": "2026-10-20T07:33:40.045Z",
+    "durationMs": 1109243
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000006/architecture-baseline.md",
+      "bytes": 10678,
+      "sha256": "sha256:10fee275cda2b39e9016c20bde420bd632c89711108e5cb5e9f611f26c8f45b5",
+      "title": "系统设计：清洁机器人运营管理系统"
+    },
+    {
+      "path": "docs/wi-t1000006/technical-contract.md",
+      "bytes": 8792,
+      "sha256": "sha256:2d66c6b9f84fc164d833d8190c56878a86cd09cd91ba82bb47175664bbe9decd",
+      "title": "技术契约：清洁机器人运营管理系统 HTTP API"
+    }
+  ],
+  "verification": [
+    {
+      "checkId": "design:completion",
+      "status": "passed"
+    },
+    {
+      "checkId": "design:application-route",
+      "status": "passed",
+      "applicationProfile": {
+        "applicationType": "fullstack-complex",
+        "routeId": "full",
+        "sha256": "sha256:ecba71a24471ff54016bd60c01bffac6dbef697106d0d8d4eb38a366751c8606",
+        "path": ".expert-team/work-items/wi-t1000006/spec-state.json#/applicationProfile"
+      }
+    }
+  ]
+}
