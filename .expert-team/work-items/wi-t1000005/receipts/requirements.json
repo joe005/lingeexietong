@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "requirements:1",
+  "receiptType": "requirements-baseline",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "requirements",
+  "inputRevision": 0,
+  "stateVersion": 1,
+  "outcome": "passed",
+  "contentHash": "sha256:9534f8d311e29a2b8de95b38be1a72ccaed57e336e8a52dfff13122ec8f9676c",
+  "createdAt": "2026-10-20T06:05:53.245Z",
+  "timing": {
+    "startedAt": "2026-10-20T06:03:11.588Z",
+    "completedAt": "2026-10-20T06:05:53.245Z",
+    "durationMs": 161657
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000005/requirements.md",
+      "bytes": 8236,
+      "sha256": "sha256:1afd01bb536d8d704bdcfd49d203861e25c5cd58365290532320cbbc4f3fc7ec",
+      "title": "商场清洁机器人运营管理系统 · 需求说明"
+    }
+  ],
+  "verification": [
+    {
+      "checkId": "requirements:completion",
+      "status": "passed"
+    }
+  ]
+}

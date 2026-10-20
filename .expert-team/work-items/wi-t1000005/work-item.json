@@ -1,0 +1,11 @@
+{
+  "workItemId": "wi-t1000005",
+  "applicationId": "application",
+  "workItemType": "initial-build",
+  "title": "请在当前 Session 中完成这个 IssueTask，按指定的连续阶段范围执行：requirements。业务任务：开发清洁任务编排与实时运营看板。运营人员按商场楼层和区域配置清洁计划，指定机器人、作业时间和清洁模式。机器人执行时，看板实时展示当前位置、任务进度、已清洁面积和异常状态；完成后生成作业报告。验收要点：演示'创建晚间清洁计划 → 分配机器人 → 查看实时进度 → 完成并查看报告'的完整流程。",
+  "request": "请在当前 Session 中完成这个 IssueTask，按指定的连续阶段范围执行：requirements。业务任务：开发清洁任务编排与实时运营看板。运营人员按商场楼层和区域配置清洁计划，指定机器人、作业时间和清洁模式。机器人执行时，看板实时展示当前位置、任务进度、已清洁面积和异常状态；完成后生成作业报告。验收要点：演示'创建晚间清洁计划 → 分配机器人 → 查看实时进度 → 完成并查看报告'的完整流程。",
+  "status": "active",
+  "specId": "general-application-development-spec",
+  "revision": 0,
+  "createdAt": "2026-10-20T06:03:11.346Z"
+}
