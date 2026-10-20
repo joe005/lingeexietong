@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "implementation:5",
+  "receiptType": "implementation-report",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "implementation",
+  "inputRevision": 4,
+  "stateVersion": 5,
+  "outcome": "passed",
+  "contentHash": "sha256:205ecfd87d27b3b309013672ff6bc0700649b9a6710f7567071be6c070dad15d",
+  "createdAt": "2026-10-20T08:30:08.295Z",
+  "timing": {
+    "startedAt": "2026-10-20T07:40:53.225Z",
+    "completedAt": "2026-10-20T08:30:08.295Z",
+    "durationMs": 2955070
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000006/implementation-report.md",
+      "bytes": 5942,
+      "sha256": "sha256:bcf2a1391c6f6a0bd903f58ea645a0fc2ebe5ed5ab944c804dacf0dc860cd0ed",
+      "title": "实施报告：清洁机器人运营管理系统（阶段：开发实现）"
+    }
+  ],
+  "url": "http://localhost:3000",
+  "verification": [
+    {
+      "checkId": "implementation:completion",
+      "status": "passed"
+    },
+    {
+      "checkId": "implementation:application-route",
+      "status": "passed",
+      "applicationProfile": {
+        "applicationType": "fullstack-complex",
+        "routeId": "plan",
+        "sha256": "sha256:ecba71a24471ff54016bd60c01bffac6dbef697106d0d8d4eb38a366751c8606",
+        "path": ".expert-team/work-items/wi-t1000006/spec-state.json#/applicationProfile"
+      }
+    }
+  ]
+}

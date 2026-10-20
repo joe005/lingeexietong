@@ -2,17 +2,18 @@
   "schemaVersion": 2,
   "specId": "general-application-development-spec",
   "specRevision": 14,
-  "state": "design_ready",
-  "revision": 2,
+  "state": "implementation_ready",
+  "revision": 5,
   "completedActions": [
     "requirements",
-    "design"
+    "design",
+    "implementation"
   ],
   "blockers": [],
   "deliveryProfile": "standard",
   "graphRevision": 5,
   "graphHash": "sha256:f3c5d7536f6fb3b63cb991188f689e9748f360a443955a70fe96d3f2cc9cabd0",
-  "updatedAt": "2026-10-20T07:33:40.045Z",
+  "updatedAt": "2026-10-20T08:30:08.295Z",
   "applicationProfile": {
     "schemaVersion": 1,
     "applicationType": "fullstack-complex",
@@ -43,5 +44,23 @@
     },
     "decidedAt": "2026-10-20T07:18:34.271Z",
     "sha256": "sha256:ecba71a24471ff54016bd60c01bffac6dbef697106d0d8d4eb38a366751c8606"
-  }
+  },
+  "approvals": [
+    {
+      "receiptId": "approval:general-application-development-spec:approve_plan:implementation:3",
+      "receiptType": "approval",
+      "operation": "approve_plan",
+      "actionId": "implementation",
+      "actor": "kingdee",
+      "requestId": "general-application-development-spec:approve_plan:implementation:3",
+      "decision": "approved",
+      "approvedAt": "2026-10-20T07:49:09.613Z",
+      "planId": "plan:7c74bb09-c825-497c-8f2d-c08ac0593363",
+      "source": {
+        "requirementsSha256": "sha256:78c0aa5e74efee0b305e7f4425553a192b368d402d9bb6673316dd67252eda71",
+        "designSha256": "sha256:10fee275cda2b39e9016c20bde420bd632c89711108e5cb5e9f611f26c8f45b5"
+      },
+      "expectedRevision": 3
+    }
+  ]
 }

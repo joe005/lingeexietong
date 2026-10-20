@@ -1,0 +1,46 @@
+{
+  "tasks": [
+    {
+      "taskId": "T01",
+      "summary": "实现服务端：数据迁移与组织/任务/上报/运维/统计 API（Hono + SQLite）",
+      "objective": "## 目标\n\n依据已批准的架构基线 `docs/wi-t1000006/architecture-baseline.md` 与技术契约 `docs/wi-t1000006/technical-contract.md`，实现服务端（Node.js ≥20 ESM + Hono + better-sqlite3，入口 `src/server.js`）：\n\n- 数据层：`migrations/` 版本化 SQL 迁移（五张业务表 + `schema_migrations`，自 `001_init.sql` 起）与 `src/db/` 数据访问层；服务启动时在事务中应用未执行迁移，自动创建 `DB_PATH` 父目录。\n- 领域模块：organization、tasking、robot-gateway、maintenance、analytics；端点、字段形状（含服务端派生字段）、错误结构与错误码以技术契约为唯一依据。\n- 状态机与事务：机器人/任务/运维事件状态流转按架构基线 §2；机器人分配采用最小确定性规则（目标楼层内 `idle` 机器人按 `code` 升序取首个）；跨表状态流转使用同步事务原子提交。\n- 静态托管：托管前端构建产物目录 `public/`（目录不存在时服务仍可正常启动并仅提供 API）。\n- 根配置唯一 owner：`package.json`/`package-lock.json` 声明后端依赖与 `start`/`dev`/`build`（聚合构建，调用 `frontend` 子包构建）/`test` 脚本，满足干净目录 `npm install && npm run build && npm start` 可运行；`README.md` 记录运行约定；如需开发并行启动辅助脚本写入 `scripts/`。\n\n## 验证\n\n以隔离 `DB_PATH` 与空闲端口启动真实服务，用项目内测试（如 `node --test tests/`）覆盖各模块代表性端点、状态机合法/非法转换与错误码，报告真实执行结果。\n\n## 边界与 AC 贡献\n\n- 不实现浏览器界面（T02 负责）；不写 `frontend/`；`public/` 仅作静态托管读取，不写入。\n- 对 AC-01~AC-05 贡献服务端数据面与业务行为正确性；界面端到端证据由后续验证阶段承担。",
+      "requirementIds": ["AC-01", "AC-02", "AC-03", "AC-04", "AC-05"],
+      "capabilityId": "engineering.implementation",
+      "taskKind": "implement",
+      "executionMode": "spawn_task",
+      "dependsOn": [],
+      "inputArtifacts": [
+        "docs/wi-t1000006/requirements.md",
+        "docs/wi-t1000006/architecture-baseline.md",
+        "docs/wi-t1000006/technical-contract.md"
+      ],
+      "artifactPaths": ["src/", "migrations/", "tests/", "scripts/", "README.md", "package.json", "package-lock.json"],
+      "additionalWritePaths": [],
+      "additionalWriteScopes": [],
+      "resourceKeys": [],
+      "failurePolicy": "block",
+      "blockerCodes": []
+    },
+    {
+      "taskId": "T02",
+      "summary": "实现 React SPA 前端：六页面、契约类型与前端构建集成",
+      "objective": "## 目标\n\n依据已批准的架构基线 `docs/wi-t1000006/architecture-baseline.md` 与技术契约 `docs/wi-t1000006/technical-contract.md`，实现 React + Vite SPA（`frontend/` 独立子包 + Tailwind CSS）：\n\n- 路由与页面：`/malls`、`/monitor`、`/tasks`、`/maintenance`、`/analytics`、`/robot-sim` 六页，遵循架构基线 §3 的 saas-ops-console 展示模板、Modern SaaS 视觉预设与状态色约定；实现面包屑逐层下钻、按商场/楼层分组的状态卡片墙与统计条、筛选表格与详情、事件处理对话框、指标卡与按商场汇总表、机器人模拟控制台等主工作流布局，以及加载/空态/错误/成功全局状态。\n- 契约消费：`frontend/src/` 内定义契约类型与 API 客户端，字段 snake_case 原样消费、不做字段转换；状态与类型界面标签映射按契约约定；不得臆造契约之外的 API 行为。\n- 数据刷新：监控页与任务列表页 5 秒轮询 + 手动刷新；写操作成功后立即重新拉取受影响数据。\n- 构建集成：Vite 构建产物输出至根 `public/`（后端静态托管目录）；dev server 将 `/api` 代理至后端。\n\n## 验证\n\n在 `frontend/` 内执行聚焦检查（如类型检查与 `npm --prefix frontend run build` 构建）并报告真实执行结果；页面数据流基于契约类型与 mock 独立验证，不依赖后端进程。\n\n## 边界与 AC 贡献\n\n- 不实现服务端 API（T01 负责）；不写根 `package.json`、`src/`、`migrations/`、`tests/`、`scripts/`。\n- 对 AC-01~AC-05 贡献用户界面与交互入口（机器人模拟控制台作为上报通道驱动面）；界面端到端证据由后续验证阶段承担。",
+      "requirementIds": ["AC-01", "AC-02", "AC-03", "AC-04", "AC-05"],
+      "capabilityId": "engineering.implementation",
+      "taskKind": "implement",
+      "executionMode": "spawn_task",
+      "dependsOn": [],
+      "inputArtifacts": [
+        "docs/wi-t1000006/requirements.md",
+        "docs/wi-t1000006/architecture-baseline.md",
+        "docs/wi-t1000006/technical-contract.md"
+      ],
+      "artifactPaths": ["frontend/", "public/"],
+      "additionalWritePaths": [],
+      "additionalWriteScopes": [],
+      "resourceKeys": [],
+      "failurePolicy": "block",
+      "blockerCodes": []
+    }
+  ]
+}
