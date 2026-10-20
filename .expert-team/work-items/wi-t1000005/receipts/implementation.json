@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "implementation:3",
+  "receiptType": "implementation-report",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "implementation",
+  "inputRevision": 2,
+  "stateVersion": 3,
+  "outcome": "passed",
+  "contentHash": "sha256:4610245ca51e682836858001ddfaf0877dd36dc50f5385eeab30d708f644dda7",
+  "createdAt": "2026-10-20T06:26:13.428Z",
+  "timing": {
+    "startedAt": "2026-10-20T06:09:16.523Z",
+    "completedAt": "2026-10-20T06:26:13.428Z",
+    "durationMs": 1016905
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000005/implementation-report.md",
+      "bytes": 8785,
+      "sha256": "sha256:2fb9a35ee285b651a6b8b29351f04133f893596dce5f9b7ff7a410421c157ef8",
+      "title": "商场清洁机器人运营管理系统 · 实施报告"
+    }
+  ],
+  "url": "http://localhost:5187/",
+  "verification": [
+    {
+      "checkId": "dev-typecheck",
+      "command": "npx tsc --noEmit",
+      "workdir": ".",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "checkId": "dev-unit-tests",
+      "command": "npx vitest run",
+      "workdir": ".",
+      "status": "passed",
+      "exitCode": 0,
+      "evidence": "3 个测试文件 26 个用例全部通过（simulator 12 / store 9 / format 5）"
+    },
+    {
+      "checkId": "dev-build",
+      "command": "npx vite build",
+      "workdir": ".",
+      "status": "passed",
+      "exitCode": 0,
+      "evidence": "1574 modules transformed，dist 产物生成"
+    },
+    {
+      "checkId": "dev-preview-server",
+      "command": "npm run dev",
+      "workdir": ".",
+      "status": "running",
+      "evidence": "Vite v5.4.21 ready，http://localhost:5187/（冒烟：/ 与 /src/main.tsx 均返回 200）"
+    },
+    {
+      "checkId": "implementation:application-route",
+      "status": "passed",
+      "applicationProfile": {
+        "applicationType": "simple-frontend",
+        "routeId": "inline",
+        "sha256": "sha256:7cf9023ab16a1b406ea78dbf964cfc57996325b782cdca04ef99f913f313aab4",
+        "path": ".expert-team/work-items/wi-t1000005/spec-state.json#/applicationProfile"
+      }
+    }
+  ]
+}

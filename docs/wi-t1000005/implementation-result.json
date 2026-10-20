@@ -1,0 +1,36 @@
+{
+  "status": "completed",
+  "url": "http://localhost:5187/",
+  "verification": [
+    {
+      "checkId": "dev-typecheck",
+      "command": "npx tsc --noEmit",
+      "workdir": ".",
+      "status": "passed",
+      "exitCode": 0
+    },
+    {
+      "checkId": "dev-unit-tests",
+      "command": "npx vitest run",
+      "workdir": ".",
+      "status": "passed",
+      "exitCode": 0,
+      "evidence": "3 个测试文件 26 个用例全部通过（simulator 12 / store 9 / format 5）"
+    },
+    {
+      "checkId": "dev-build",
+      "command": "npx vite build",
+      "workdir": ".",
+      "status": "passed",
+      "exitCode": 0,
+      "evidence": "1574 modules transformed，dist 产物生成"
+    },
+    {
+      "checkId": "dev-preview-server",
+      "command": "npm run dev",
+      "workdir": ".",
+      "status": "running",
+      "evidence": "Vite v5.4.21 ready，http://localhost:5187/（冒烟：/ 与 /src/main.tsx 均返回 200）"
+    }
+  ]
+}
