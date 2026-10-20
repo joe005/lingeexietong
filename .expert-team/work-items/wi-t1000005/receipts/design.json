@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "design:2",
+  "receiptType": "architecture-plan",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "design",
+  "inputRevision": 1,
+  "stateVersion": 2,
+  "outcome": "passed",
+  "contentHash": "sha256:c87c42a2c97ec269bd65383b0998696c0cf47db100ef5c96a21f45665a5cff72",
+  "createdAt": "2026-10-20T06:08:23.282Z",
+  "timing": {
+    "startedAt": "2026-10-20T06:06:45.146Z",
+    "completedAt": "2026-10-20T06:08:23.281Z",
+    "durationMs": 98135
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000005/architecture-baseline.md",
+      "bytes": 3668,
+      "sha256": "sha256:129d9e69db0d681b50f032efa05bc414afe0df3085d8578fca964d989607f686",
+      "title": "商场清洁机器人运营管理系统 · 架构基线"
+    }
+  ],
+  "verification": [
+    {
+      "checkId": "design:completion",
+      "status": "passed"
+    },
+    {
+      "checkId": "design:application-route",
+      "status": "passed",
+      "applicationProfile": {
+        "applicationType": "simple-frontend",
+        "routeId": "compact",
+        "sha256": "sha256:7cf9023ab16a1b406ea78dbf964cfc57996325b782cdca04ef99f913f313aab4",
+        "path": ".expert-team/work-items/wi-t1000005/spec-state.json#/applicationProfile"
+      }
+    }
+  ]
+}

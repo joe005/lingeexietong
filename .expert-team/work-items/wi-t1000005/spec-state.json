@@ -2,14 +2,45 @@
   "schemaVersion": 2,
   "specId": "general-application-development-spec",
   "specRevision": 14,
-  "state": "requirements_ready",
-  "revision": 1,
+  "state": "design_ready",
+  "revision": 2,
   "completedActions": [
-    "requirements"
+    "requirements",
+    "design"
   ],
   "blockers": [],
   "deliveryProfile": "standard",
   "graphRevision": 5,
   "graphHash": "sha256:f3c5d7536f6fb3b63cb991188f689e9748f360a443955a70fe96d3f2cc9cabd0",
-  "updatedAt": "2026-10-20T06:05:53.245Z"
+  "updatedAt": "2026-10-20T06:08:23.282Z",
+  "applicationProfile": {
+    "schemaVersion": 1,
+    "applicationType": "simple-frontend",
+    "source": {
+      "artifactPath": "docs/wi-t1000005/requirements.md",
+      "sha256": "sha256:1afd01bb536d8d704bdcfd49d203861e25c5cd58365290532320cbbc4f3fc7ec"
+    },
+    "reason": "需求为单运营人员角色的清洁计划配置与实时看板演示：AC-01/AC-02 读回基线仅要求创建/分配后重新打开即可观察到一致字段（刷新/重开可见），未要求服务端权威数据、认证/权限、后台任务、外部服务集成或跨用户/设备共享；需求 §5.3 的实时展示未指定实现技术，可由前端模拟机器人执行产生的数据流闭环。按路由默认规则选 simple-frontend，使用浏览器 localStorage 持久化。",
+    "evidence": {
+      "supporting": [
+        "需求 §2 唯一角色为运营人员，无认证/权限分级要求",
+        "AC-01/AC-02 读回基线明确'不依赖刷新/重开/重启后的持久化承诺即可在读回时观察到'",
+        "需求 §5.3 实时展示未指定轮询/推送等实现技术，前端模拟执行数据即可形成可观察闭环",
+        "需求 §5.5 机器人来源为演示前提，可用前端内置种子机器人清单满足分配步骤",
+        "全文无跨用户、跨设备共享或外部系统集成表述"
+      ],
+      "excluding": [
+        "未要求服务端权威数据库或服务端渲染",
+        "未要求认证/权限体系",
+        "未要求后台任务或定时调度（§5.3 明确是否按作业时间自动调度未规定）",
+        "未要求外部服务/设备集成",
+        "未要求跨用户/设备数据共享"
+      ],
+      "unresolved": [
+        "机器人数据源（真实外部系统 vs 前端模拟）未规定；按演示前提采用前端模拟数据，不引入服务端依赖，若后续要求真实机器人接入需重新评估路线"
+      ]
+    },
+    "decidedAt": "2026-10-20T06:07:36.594Z",
+    "sha256": "sha256:7cf9023ab16a1b406ea78dbf964cfc57996325b782cdca04ef99f913f313aab4"
+  }
 }
