@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 2,
+  "receiptId": "requirements:1",
+  "receiptType": "requirements-baseline",
+  "specId": "general-application-development-spec",
+  "graphRevision": 5,
+  "actionId": "requirements",
+  "inputRevision": 0,
+  "stateVersion": 1,
+  "outcome": "passed",
+  "contentHash": "sha256:d5436463b1d9760e3f4b5511937a9fca25c9264eff8e1106bcd9abd0115fd5ee",
+  "createdAt": "2026-10-20T07:12:34.017Z",
+  "timing": {
+    "startedAt": "2026-10-20T07:08:58.080Z",
+    "completedAt": "2026-10-20T07:12:34.017Z",
+    "durationMs": 215937
+  },
+  "artifacts": [
+    {
+      "path": "docs/wi-t1000006/requirements.md",
+      "bytes": 7829,
+      "sha256": "sha256:78c0aa5e74efee0b305e7f4425553a192b368d402d9bb6673316dd67252eda71",
+      "title": "清洁机器人运营管理系统需求"
+    }
+  ],
+  "verification": [
+    {
+      "checkId": "requirements:completion",
+      "status": "passed"
+    }
+  ]
+}
