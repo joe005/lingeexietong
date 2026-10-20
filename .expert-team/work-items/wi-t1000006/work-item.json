@@ -4,8 +4,15 @@
   "workItemType": "initial-build",
   "title": "请在当前 Session 中完成这个 IssueTask，按指定的连续阶段范围执行：requirements。\n业务任务：开发清洁机器人运营管理系统\n\n面向大型购物中心、商业综合体的清洁机器人智能运营管理系统，实现多商场、多楼层、多机器人统一管理，通过可视化监控、智能任务调度、设备运维和数据分析，提升商场清洁效率，降低人工管理成本。\n阶段进度和回执只作为本地执行事实保存。只有全部阶段成功后，才发布一组最终产物和一个最终 WorkItem 快照。不得执行此范围之外的阶段；完成 requirements 后停止。",
   "request": "请在当前 Session 中完成这个 IssueTask，按指定的连续阶段范围执行：requirements。\n业务任务：开发清洁机器人运营管理系统\n\n面向大型购物中心、商业综合体的清洁机器人智能运营管理系统，实现多商场、多楼层、多机器人统一管理，通过可视化监控、智能任务调度、设备运维和数据分析，提升商场清洁效率，降低人工管理成本。\n阶段进度和回执只作为本地执行事实保存。只有全部阶段成功后，才发布一组最终产物和一个最终 WorkItem 快照。不得执行此范围之外的阶段；完成 requirements 后停止。",
-  "status": "active",
+  "status": "completed",
   "specId": "general-application-development-spec",
-  "revision": 0,
-  "createdAt": "2026-10-20T07:08:57.903Z"
+  "revision": 1,
+  "createdAt": "2026-10-20T07:08:57.903Z",
+  "completedAt": "2026-10-20T09:05:25.202Z",
+  "completion": {
+    "applicationRevision": 1,
+    "snapshotHash": "sha256:1e2119000ce3e507246bbd7ec362d6ad53cd2c202d034769a42ed7cad9af8375",
+    "completedAt": "2026-10-20T09:05:25.202Z"
+  },
+  "updatedAt": "2026-10-20T09:05:25.202Z"
 }

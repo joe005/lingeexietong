@@ -1,0 +1,11 @@
+{
+  "type": "cosmic",
+  "appCode": "kdma_qcp_ext",
+  "appName": "采购检验",
+  "appId": "64AMW215T3Z8",
+  "cosmicAppName": "采购检验",
+  "bizCloudId": "0M7E/M=ND0R5",
+  "bizCloudName": "质量管理",
+  "appDescription": "承载采购到货质检等客户化表单的扩展应用",
+  "createdAt": "2026-10-20T08:37:07.113Z"
+}

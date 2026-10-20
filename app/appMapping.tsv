@@ -1,0 +1,3 @@
+appCode	appName	appDescription	type	path
+kdma_qcp_ext	采购检验	承载采购到货质检等客户化表单的扩展应用	cosmic	app/kdma_qcp_ext/archive.json
+
